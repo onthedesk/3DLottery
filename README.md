@@ -1,11 +1,20 @@
-# 3DLottery
-简易的年会抽奖程序
+forked from onthedesk/3DLottery  
+# 3DLotteryBB
+简易的年会抽奖程序(黑箱/黑幕版)  
+有些老板喜欢形式主义，所以特地开发了 ~~钦(ying4)点模式和天选之子模式~~  
+## （以上还未实现，目前天选之子模式为第一优先级）  
+~~钦(ying4)点模式：~~  
+~~描述：只有钦定的员工才有资格抽奖，其他的都是陪跑。~~
+~~用法：维护 js/config.js 中 staff_internal 列表，填入真正期望抽奖的员工，然后将 internal 变量值改为1~~
 
-### 演示地址: [http://www.xuelu.org/demo/3DLottery/index.html](http://www.xuelu.org/demo/3DLottery/index.html)
+~~天选之子模式~~  
+~~描述：一定会拿奖的天选之子，其他凡人拿不拿奖全部看脸。~~  
+~~用法： 维护 js/config.js 中 staff_abslute 列表，填入真正期望抽奖的员工，然后将 abslute 变量值改为1. 目前设置为第一个中奖~~
+
 ### 如何使用: 
 1. 打包下载
 2. 设置图片,并配置js/config.js
-3. 在浏览中打开index.html，进入演示模式即可
+3. 在浏览器中打开index.html，进入演示模式即可
 
 
 ### 功能说明：
