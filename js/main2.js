@@ -254,8 +254,12 @@ var init = function(){
 	});
 
 	//更新标题
-	$('.keTitle').text(Conf.title);
-
+	if (abs_mode == 0) {
+		$('.keTitle').text(Conf.title);
+	}
+	else if (abs_mode == 1) {
+		$('.keTitle').text(Conf.title + '-调试模式')
+	}
 	//绑定键盘事件,空格和回车
 	$(document).bind('keypress', function(e){
 		if (e.keyCode == 32 || e.keyCode == 13) {
