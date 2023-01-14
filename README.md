@@ -1,11 +1,18 @@
-# 3DLottery
-简易的年会抽奖程序
+forked from onthedesk/3DLottery  
+# 3DLotteryBB
+简易的年会抽奖程序  
+开发了必中模式来方便调试   
 
-### 演示地址: [http://www.xuelu.org/demo/3DLottery/index.html](http://www.xuelu.org/demo/3DLottery/index.html)
+必中模式  
+用法： 维护 js/config.js 中 staff_abslute 数组，填入你希望中奖的员工或员工们，然后将 abslute 变量值改为1。 从第一次抽奖开始，数组中的员工都会先于其他人先后中奖，直到他们都中完奖后才会继续抽取普通员工。  
+注：开启必中模式后会在Conf.title变量后添加字符串“调试模式“来提醒开发者现在处于调试模式下  
+![debugmode](/images/debugmode.png)    
+
+
 ### 如何使用: 
 1. 打包下载
 2. 设置图片,并配置js/config.js
-3. 在浏览中打开index.html，进入演示模式即可
+3. 在浏览器中打开index.html，进入演示模式即可
 
 
 ### 功能说明：

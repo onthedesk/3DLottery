@@ -1,6 +1,8 @@
 //全局配置变量
 
 Conf = {
+	abslute:1,
+	//必中模式，staff_abslute内必中,0为关闭，1为开启。
 	//存放照片的文件夹名称，相对于index.html的相对路径
 	imgDir: 'photos',
 	//更改标题
@@ -22,6 +24,14 @@ Conf = {
 		'约瑟夫',
 		'鲜灵霞',
 		'黎瑞恩',
+		'艾德'
+	],
+	staff_internal:[
+		'黎瑞恩',
+		'艾德'
+	],
+	staff_abslute:[
+		'理查德',
 		'艾德'
 	]
 

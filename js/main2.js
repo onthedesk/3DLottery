@@ -1,5 +1,7 @@
 //业务文件
 
+var abs_list = Conf.staff_abslute;
+var abs_mode = Conf.abslute;
 
 var Top = {
 	isRolling: false,
@@ -87,6 +89,7 @@ var Roll = (function(){
 	var init = function(conf){
 
 		var data = Data.getCurrent();
+		console.log(data)
 
 		config = $.extend(config, conf);
 
@@ -132,7 +135,22 @@ var Roll = (function(){
 			View.addCong('所有人全部');
 			return false;
 		}
-		
+		if (abs_mode == 0){
+			currentName = currentName;
+			$('#d_tab29 ul.d_img').html('<li class=\"d_pos2\" data-name="' + currentName + '"><img src="'+ Conf.imgDir +'/' + currentName + '.jpg" alt="' + currentName + '"/></li>');
+		}
+		else{
+			var arr1 = abs_list;
+			var arr2 = Data.getCurrent();
+			var items = "";
+			let list = arr2.filter(items => {
+			if (!arr1.includes(items)) return items;
+			currentName = items;
+			})
+			$('#d_tab29 ul.d_img').html('<li class=\"d_pos2\" data-name="' + currentName + '"><img src="'+ Conf.imgDir +'/' + currentName + '.jpg" alt="' + currentName + '"/></li>');
+			
+		}
+
 		console.log(currentName + '中奖啦')
 
 		//添加贺词
@@ -205,7 +223,7 @@ var Data = (function(){
 	var getCurrent = function(){
 		//打乱顺序
 		return CurrentStaff.sort(function(){
-		 	return 0.5 - Math.random() 
+			return 0.5 - Math.random() 
 		});;
 	};
 
@@ -236,8 +254,12 @@ var init = function(){
 	});
 
 	//更新标题
-	$('.keTitle').text(Conf.title);
-
+	if (abs_mode == 0) {
+		$('.keTitle').text(Conf.title);
+	}
+	else if (abs_mode == 1) {
+		$('.keTitle').text(Conf.title + '-调试模式')
+	}
 	//绑定键盘事件,空格和回车
 	$(document).bind('keypress', function(e){
 		if (e.keyCode == 32 || e.keyCode == 13) {
